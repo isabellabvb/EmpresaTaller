@@ -15,4 +15,20 @@ public class PatrullajeMovil extends ServicioSeguridad {
     public double calcularCostoMensual() {
         return getTarifaMensual() * cantRutas * kmRecorridos;
     }
+
+    public int getCantRutas() {
+        return cantRutas;
+    }
+
+    public void setCantRutas(int cantRutas) {
+        this.cantRutas = cantRutas;
+    }
+
+    public double getKmRecorridos() {
+        return kmRecorridos;
+    }
+
+    public void setKmRecorridos(double kmRecorridos) {
+        this.kmRecorridos = kmRecorridos;
+    }
 }

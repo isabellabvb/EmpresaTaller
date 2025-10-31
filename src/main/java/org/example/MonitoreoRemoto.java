@@ -12,4 +12,12 @@ public class MonitoreoRemoto extends ServicioSeguridad {
     public double calcularCostoMensual() {
         return getTarifaMensual() * cantDispositivosVigilados;
     }
+
+    public int getCantDispositivosVigilados() {
+        return cantDispositivosVigilados;
+    }
+
+    public void setCantDispositivosVigilados(int cantDispositivosVigilados) {
+        this.cantDispositivosVigilados = cantDispositivosVigilados;
+    }
 }

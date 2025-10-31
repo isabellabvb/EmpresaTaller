@@ -9,8 +9,9 @@ public abstract class Empleado implements IAgendable {
     protected Turno turno;
     protected LinkedList<Double> bonificaciones;
 
-    //Atributoos relacionales
-    protected LinkedList<EquipoAsignado> listEquiposAsignados;
+    //Atributos relacionales
+    protected LinkedList<AgendaItem> agendas;
+    private LinkedList <EquipoAsignado> listEquipoAsignado;
 
 
     public Empleado(String nombre, String id, double salarioBase, int horasExtra, Turno turno) {
@@ -19,15 +20,22 @@ public abstract class Empleado implements IAgendable {
         this.salarioBase = salarioBase;
         this.horasExtra = horasExtra;
         this.turno = turno;
-        this.bonificaciones = new LinkedList<>();
-        this.listEquiposAsignados = new LinkedList<>();
+        bonificaciones = new LinkedList<>();
+        listEquipoAsignado = new LinkedList<>();
     }
 
-    public void programar(LocalDate fecha, String descripcion){
-
+    //Implementacion interfaz
+    public void programar(LocalDate fecha,String descripcion) {
+        AgendaItem agenda = new AgendaItem(descripcion,fecha);
     }
-    public LinkedList<AgendaItem> obtenerAgenda(LocalDate desde, LocalDate hasta){
-        return null;
+
+    public LinkedList<AgendaItem> obtenerAgenda(LocalDate desde, LocalDate hasta) {
+        for (AgendaItem agenda : agendas) {
+            if (agenda.getFecha().isAfter(desde) && agenda.getFecha().isBefore(hasta)) {
+                agendas.add(agenda);
+            }
+        }
+        return agendas;
     }
 
     public abstract double calcularSalarioTotal();
@@ -69,11 +77,11 @@ public abstract class Empleado implements IAgendable {
     public void setBonificaciones(LinkedList<Double> bonificaciones) {
         this.bonificaciones = bonificaciones;
     }
-    public LinkedList<EquipoAsignado> getListEquiposAsignados() {
-        return listEquiposAsignados;
+    public LinkedList<EquipoAsignado> getListEquipoAsignado() {
+        return listEquipoAsignado;
     }
-    public void setListEquiposAsignados(LinkedList<EquipoAsignado> listEquiposAsignados) {
-        this.listEquiposAsignados = listEquiposAsignados;
+    public void setListEquipoAsignado(LinkedList<EquipoAsignado> listEquipoAsignado) {
+        this.listEquipoAsignado = listEquipoAsignado;
     }
 
 }

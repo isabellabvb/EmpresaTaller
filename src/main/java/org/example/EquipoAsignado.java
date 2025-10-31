@@ -5,6 +5,9 @@ public class EquipoAsignado {
     private String estado;
     private double valorReposicion;
 
+    //Relacionales
+    private Empleado empleado;
+
     public EquipoAsignado(String codigo, String estado, double valorReposicion) {
         this.codigo = codigo;
         this.estado = estado;
@@ -34,4 +37,13 @@ public class EquipoAsignado {
     public void setValorReposicion(double valorReposicion) {
         this.valorReposicion = valorReposicion;
     }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
+    }
 }
+
