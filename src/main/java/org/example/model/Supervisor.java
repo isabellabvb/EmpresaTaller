@@ -1,7 +1,6 @@
-package org.example;
-import java.util.LinkedList;
+package org.example.model;
 
-public class Supervisor extends Empleado{
+public class Supervisor extends Empleado {
     private double bonoCoordinacion;
 
     public Supervisor(String nombre, String id, double salarioBase, int horasExtra, Turno turno, double bonoCoordinacion) {

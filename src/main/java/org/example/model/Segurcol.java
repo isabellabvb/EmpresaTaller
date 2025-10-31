@@ -1,4 +1,5 @@
-package org.example;
+package org.example.model;
+
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 public class Segurcol  implements IAuditable {

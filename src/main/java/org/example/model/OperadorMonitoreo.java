@@ -1,7 +1,6 @@
-package org.example;
-import java.util.LinkedList;
+package org.example.model;
 
-public class OperadorMonitoreo extends Empleado{
+public class OperadorMonitoreo extends Empleado {
     private int numeroZonas;
 
     public OperadorMonitoreo(String nombre, String id, double salarioBase, int horasExtra, Turno turno, int numeroZonas) {

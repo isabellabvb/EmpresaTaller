@@ -1,6 +1,6 @@
-package org.example;
-import java.util.LinkedList;
-public class Vigilante extends Empleado{
+package org.example.model;
+
+public class Vigilante extends Empleado {
 
     private  String numPuesto;
     private TipoArma tipoArma;

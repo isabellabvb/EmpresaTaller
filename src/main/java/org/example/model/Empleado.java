@@ -1,4 +1,5 @@
-package org.example;
+package org.example.model;
+
 import java.time.LocalDate;
 import java.util.LinkedList;
 public abstract class Empleado implements IAgendable {
